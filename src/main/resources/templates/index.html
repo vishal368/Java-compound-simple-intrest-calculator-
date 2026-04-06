@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Interest Calculator</title>
+    <style>
+        body { font-family: Arial; text-align: center; }
+        input, select { margin: 10px; padding: 8px; }
+        button { padding: 10px; margin: 5px; }
+    </style>
+</head>
+<body>
+
+<h2>Interest Calculator</h2>
+
+<form action="/calculate" method="post">
+    
+    <input type="number" name="amount" placeholder="Amount" required><br>
+    <input type="number" name="time" placeholder="Time (years)" required><br>
+    <input type="number" name="rate" placeholder="Rate (%)" required><br>
+
+    <select name="type">
+        <option value="simple">Simple Interest</option>
+        <option value="compound">Compound Interest</option>
+    </select><br>
+
+    <button type="submit">Calculate</button>
+    <button type="reset">Clear</button>
+
+</form>
+
+<h3 th:if="${result != null}">
+    Result: <span th:text="${result}"></span>
+</h3>
+
+</body>
+</html>
