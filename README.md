@@ -1,2 +1,4 @@
 # Java-compound-simple-intrest-calculator-
-how to run ( mvn spring-boot:run )  (  http://localhost:8089 )
+# how to run 
+Run Command : mvn spring-boot:run 
+Go to link: http://localhost:8089 
